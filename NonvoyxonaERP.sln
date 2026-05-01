@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NonvoyxonaERP.API", "Nonvoy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NonvoyxonaERP.Application", "NonvoyxonaERP.Application\NonvoyxonaERP.Application.csproj", "{A9DDAF62-365B-4F19-B8BA-4D09BBD8718C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NonvoyxonaERP.WPF", "NonvoyxonaERP.WPF\NonvoyxonaERP.WPF.csproj", "{163FD1AF-75D8-439F-B4ED-C0309ACF0463}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A9DDAF62-365B-4F19-B8BA-4D09BBD8718C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9DDAF62-365B-4F19-B8BA-4D09BBD8718C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9DDAF62-365B-4F19-B8BA-4D09BBD8718C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{163FD1AF-75D8-439F-B4ED-C0309ACF0463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{163FD1AF-75D8-439F-B4ED-C0309ACF0463}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{163FD1AF-75D8-439F-B4ED-C0309ACF0463}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{163FD1AF-75D8-439F-B4ED-C0309ACF0463}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
