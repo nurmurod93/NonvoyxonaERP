@@ -1,0 +1,6 @@
+@NonvoyxonaERP.API_HostAddress = http://localhost:5064
+
+GET {{NonvoyxonaERP.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
