@@ -1,0 +1,92 @@
+﻿<Page x:Class="NonvoyxonaERP.WPF.Views.XodimlarPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Background="#F0F2F5">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Button x:Name="btnYangi"
+                    Content="➕ Yangi Xodim"
+                    Background="#1E3A5F"
+                    Foreground="White"
+                    Padding="15,8"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Click="btnYangi_Click"/>
+            <Button x:Name="btnYangilash"
+                    Content="🔄 Yangilash"
+                    Background="#2A5298"
+                    Foreground="White"
+                    Padding="15,8"
+                    Margin="10,0,0,0"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Click="btnYangilash_Click"/>
+        </StackPanel>
+
+        <DataGrid Grid.Row="1"
+                  x:Name="dgXodimlar"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  Background="White"
+                  BorderBrush="#E0E0E0"
+                  BorderThickness="1"
+                  RowBackground="White"
+                  AlternatingRowBackground="#F8F9FA"
+                  GridLinesVisibility="Horizontal"
+                  HorizontalGridLinesBrush="#E0E0E0"
+                  SelectionMode="Single"
+                  CanUserResizeRows="False"
+                  HeadersVisibility="Column">
+
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="#1E3A5F"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="Padding" Value="10,8"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                <DataGridTextColumn Header="FIO" Binding="{Binding FIO}" Width="200"/>
+                <DataGridTextColumn Header="Telefon" Binding="{Binding Telefon}" Width="130"/>
+                <DataGridTextColumn Header="Lavozimi" Binding="{Binding Lavozimi}" Width="130"/>
+                <DataGridTextColumn Header="Maosh turi" Binding="{Binding MaoshiTuri}" Width="100"/>
+                <DataGridTextColumn Header="Asosiy maosh" Binding="{Binding AsosiyMaoshi, StringFormat={}{0:N0}}" Width="130"/>
+                <DataGridTextColumn Header="Ishga kirgan" Binding="{Binding IshgaKirgan, StringFormat={}{0:dd.MM.yyyy}}" Width="120"/>
+                <DataGridCheckBoxColumn Header="Aktiv" Binding="{Binding Aktiv}" Width="60"/>
+                <DataGridTemplateColumn Header="Amallar" Width="150">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Content="✏️ Tahrir"
+                                        Background="#FFC107"
+                                        Foreground="White"
+                                        Padding="8,4"
+                                        BorderThickness="0"
+                                        Margin="2"
+                                        Cursor="Hand"
+                                        Click="btnTahrir_Click"/>
+                                <Button Content="🗑️ O'chir"
+                                        Background="#DC3545"
+                                        Foreground="White"
+                                        Padding="8,4"
+                                        BorderThickness="0"
+                                        Margin="2"
+                                        Cursor="Hand"
+                                        Click="btnOchir_Click"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

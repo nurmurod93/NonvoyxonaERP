@@ -30,10 +30,12 @@ namespace NonvoyxonaERP.WPF
         private void Xomashyolar_Click(object sender, RoutedEventArgs e)
         {
             PageTitle.Text = "Xomashyolar";
+            MainFrame.Navigate(new Views.XomashyolarPage());
         }
         private void Xodimlar_Click(object sender, RoutedEventArgs e)
         {
             PageTitle.Text = "Xodimlar";
+            MainFrame.Navigate(new Views.XodimlarPage());
         }
         private void Mijozlar_Click(object sender, RoutedEventArgs e)
         {
@@ -42,30 +44,37 @@ namespace NonvoyxonaERP.WPF
         private void Savdo_Click(object sender, RoutedEventArgs e)
         {
             PageTitle.Text = "Savdo";
+            MainFrame.Navigate(new Views.SavdoPage());
         }
         private void Tochkalar_Click(object sender, RoutedEventArgs e)
         {
             PageTitle.Text = "Tochkalar";
+            MainFrame.Navigate(new Views.TochkalarPage());
         }
         private void Kassa_Click(object sender, RoutedEventArgs e)
         {
             PageTitle.Text = "Kassa";
+            MainFrame.Navigate(new Views.KassaPage());
         }
         private void IshAkt_Click(object sender, RoutedEventArgs e)
         {
             PageTitle.Text = "Ish Akt";
+            MainFrame.Navigate(new Views.IshAktPage());
         }
         private void Transfer_Click(object sender, RoutedEventArgs e)
         {
             PageTitle.Text = "Transfer";
+            MainFrame.Navigate(new Views.TransferPage());
         }
         private void Davomat_Click(object sender, RoutedEventArgs e)
         {
             PageTitle.Text = "Davomat";
+            MainFrame.Navigate (new Views.DavomatPage());
         }
         private void Maosh_Click(object sender, RoutedEventArgs e)
         {
             PageTitle.Text = "Maosh";
+            MainFrame.Navigate(new Views.MaoshPage());
         }
     }
 
