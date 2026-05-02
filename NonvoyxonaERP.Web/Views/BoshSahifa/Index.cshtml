@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Bosh Sahifa";
+}
+
+<div class="row mb-4">
+    <div class="col-12">
+        <h2>🍞 NonvoyxonaERP — Bosh Sahifa</h2>
+        <p class="text-muted">Nonvoyxona boshqaruv tizimiga xush kelibsiz!</p>
+    </div>
+</div>
+
+<!-- Statistika kartochkalari -->
+<div class="row g-3 mb-4">
+    <div class="col-md-3">
+        <div class="card bg-primary text-white shadow">
+            <div class="card-body">
+                <h5 class="card-title">🥖 Maxsulotlar</h5>
+                <p class="card-text fs-4 fw-bold">Ro'yxat</p>
+                <a asp-controller="Maxsulotlar" asp-action="Index"
+                   class="btn btn-light btn-sm">Ko'rish</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-success text-white shadow">
+            <div class="card-body">
+                <h5 class="card-title">💰 Savdo</h5>
+                <p class="card-text fs-4 fw-bold">Hisobot</p>
+                <a asp-controller="Savdo" asp-action="Index"
+                   class="btn btn-light btn-sm">Ko'rish</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-warning text-dark shadow">
+            <div class="card-body">
+                <h5 class="card-title">👥 Xodimlar</h5>
+                <p class="card-text fs-4 fw-bold">Ro'yxat</p>
+                <a asp-controller="Xodimlar" asp-action="Index"
+                   class="btn btn-dark btn-sm">Ko'rish</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-danger text-white shadow">
+            <div class="card-body">
+                <h5 class="card-title">🌾 Xomashyo</h5>
+                <p class="card-text fs-4 fw-bold">Ombor</p>
+                <a asp-controller="Xomashyolar" asp-action="Index"
+                   class="btn btn-light btn-sm">Ko'rish</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Ikkinchi qator -->
+<div class="row g-3">
+    <div class="col-md-3">
+        <div class="card bg-info text-white shadow">
+            <div class="card-body">
+                <h5 class="card-title">📍 Tochkalar</h5>
+                <a asp-controller="Tochkalar" asp-action="Index"
+                   class="btn btn-light btn-sm">Ko'rish</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-secondary text-white shadow">
+            <div class="card-body">
+                <h5 class="card-title">💵 Kassa</h5>
+                <a asp-controller="Kassalar" asp-action="Index"
+                   class="btn btn-light btn-sm">Ko'rish</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-dark text-white shadow">
+            <div class="card-body">
+                <h5 class="card-title">🏭 Ishlab Chiqarish</h5>
+                <a asp-controller="IshAktlar" asp-action="Index"
+                   class="btn btn-light btn-sm">Ko'rish</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-primary text-white shadow">
+            <div class="card-body">
+                <h5 class="card-title">💳 Maosh</h5>
+                <a asp-controller="Maoshlar" asp-action="Index"
+                   class="btn btn-light btn-sm">Ko'rish</a>
+            </div>
+        </div>
+    </div>
+</div>

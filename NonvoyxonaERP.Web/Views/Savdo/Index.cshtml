@@ -1,0 +1,47 @@
+﻿@model List<NonvoyxonaERP.Application.DTOs.Savdo.SavdoGetDTO>
+@{
+    ViewData["Title"] = "Savdo";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>💰 Savdo</h2>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body p-0">
+        <table class="table table-hover table-striped mb-0">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Tochka</th>
+                    <th>Xodim</th>
+                    <th>Jami summa</th>
+                    <th>To'lov turi</th>
+                    <th>Holat</th>
+                    <th>Sana</th>
+                    <th>Amallar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.TochkaNomi</td>
+                        <td>@item.XodimFIO</td>
+                        <td>@item.JamiSumma.ToString("N0")</td>
+                        <td>@item.TolovTuri</td>
+                        <td><span class="badge bg-success">@item.Holat</span></td>
+                        <td>@item.YaratilganVaqt.ToString("dd.MM.yyyy HH:mm")</td>
+                        <td>
+                            <form asp-action="Delete" asp-route-id="@item.Id" method="post"
+                                  onsubmit="return confirm('O\'chirishni tasdiqlaysizmi?')">
+                                <button type="submit" class="btn btn-sm btn-danger">🗑️ O'chir</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

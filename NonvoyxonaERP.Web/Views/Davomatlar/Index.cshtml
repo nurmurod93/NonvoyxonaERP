@@ -1,0 +1,48 @@
+﻿@model List<NonvoyxonaERP.Application.DTOs.Davomat.DavomatGetDTO>
+@{
+    ViewData["Title"] = "Davomat";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>📅 Davomat</h2>
+    <a asp-action="Create" class="btn btn-primary">➕ Davomat Belgilash</a>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body p-0">
+        <table class="table table-hover table-striped mb-0">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Xodim</th>
+                    <th>Sana</th>
+                    <th>Keldi</th>
+                    <th>Ketdi</th>
+                    <th>Smena</th>
+                    <th>Izoh</th>
+                    <th>Amallar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.XodimFIO</td>
+                        <td>@item.Sana.ToString("dd.MM.yyyy")</td>
+                        <td>@item.KeldiVaqt</td>
+                        <td>@item.KetdiVaqt</td>
+                        <td>@item.Smena</td>
+                        <td>@item.Izoh</td>
+                        <td>
+                            <form asp-action="Delete" asp-route-id="@item.Id" method="post"
+                                  onsubmit="return confirm('O\'chirishni tasdiqlaysizmi?')">
+                                <button type="submit" class="btn btn-sm btn-danger">🗑️ O'chir</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

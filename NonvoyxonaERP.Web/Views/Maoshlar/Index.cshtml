@@ -1,0 +1,52 @@
+﻿@model List<NonvoyxonaERP.Application.DTOs.Maosh.MaoshGetDTO>
+@{
+    ViewData["Title"] = "Maosh";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>💳 Maosh</h2>
+    <a asp-action="Create" class="btn btn-primary">➕ Maosh Hisoblash</a>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body p-0">
+        <table class="table table-hover table-striped mb-0">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Xodim</th>
+                    <th>Yil</th>
+                    <th>Oy</th>
+                    <th>Hisoblangan</th>
+                    <th>Avans</th>
+                    <th>Shtraf</th>
+                    <th>Mukofot</th>
+                    <th>Qoldiq</th>
+                    <th>Amallar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.XodimFIO</td>
+                        <td>@item.Yil</td>
+                        <td>@item.Oy</td>
+                        <td>@item.HisoblanganMaosh.ToString("N0")</td>
+                        <td>@item.Avans.ToString("N0")</td>
+                        <td>@item.Shtraf.ToString("N0")</td>
+                        <td>@item.Mukofot.ToString("N0")</td>
+                        <td><strong>@item.QoldiqMaosh.ToString("N0")</strong></td>
+                        <td>
+                            <form asp-action="Delete" asp-route-id="@item.Id" method="post"
+                                  onsubmit="return confirm('O\'chirishni tasdiqlaysizmi?')">
+                                <button type="submit" class="btn btn-sm btn-danger">🗑️ O'chir</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
