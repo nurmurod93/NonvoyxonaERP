@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(start *)",
+      "Bash(curl -s -o - -w \"\\\\nHTTP_STATUS:%{http_code}\" http://localhost:5001)",
+      "Bash(curl -s -o - -w \"\\\\nHTTP_STATUS:%{http_code}\" http://localhost:5000/swagger)",
+      "Bash(docker compose up *)",
+      "Bash(curl -s -o - -w \"\\\\nHTTP_STATUS:%{http_code}\" http://localhost:5000/swagger/index.html)",
+      "Bash(docker compose config *)",
+      "Bash(docker compose ps *)"
+    ]
+  }
+}
