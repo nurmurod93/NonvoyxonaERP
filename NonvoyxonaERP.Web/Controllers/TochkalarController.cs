@@ -4,10 +4,10 @@ using NonvoyxonaERP.Web.Services;
 
 namespace NonvoyxonaERP.Web.Controllers
 {
-    public class TochkaController : Controller
+    public class TochkalarController : Controller
     {
         private readonly ApiService _api;
-        public TochkaController(ApiService api) => _api = api;
+        public TochkalarController(ApiService api) => _api = api;
         
         public async Task<IActionResult> Index()
         {
